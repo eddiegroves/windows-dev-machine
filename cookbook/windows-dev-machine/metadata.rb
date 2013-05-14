@@ -1,0 +1,5 @@
+name            'windows-dev-machine'
+description     'Sets up a personalised windows development machine'
+version         '0.1.0'
+depends         'windows'
+supports        'windows'
