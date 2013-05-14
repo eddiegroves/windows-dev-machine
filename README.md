@@ -10,6 +10,10 @@ Get cookbook dependencies
 
     berks install --path ./cookbooks
 
+Go!
+
+    chef-solo -c ./solo.rb -j node.json
+
 ## Uses
 
 * Chef
