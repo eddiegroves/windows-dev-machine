@@ -1,5 +1,5 @@
 # Sysinternals
-url = node['sysinternals']['path']
+url = node['sysinternals']['url']
 path = node['sysinternals']['path']
 check_file = "PsExec.exe"
 
