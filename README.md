@@ -2,29 +2,30 @@ My personal windows development machine setup that uses Chef with my win-dev coo
 
 ## Setup From Scratch
 
-1. Install Chef for Windows
+### Install Chef for Windows
 
 [Chef installer](http://opscode.com/chef/install.msi)
 
-2. Open an **elevated** Powershell prompt and download this repository
-
-    # Create and enter a temp working directory
+### Open an *elevated* Powershell prompt and download this repository
+    
     mkdir C:\home\; cd C:\home\
-    # Download this repository (we're sans git at this point)
-    (New-Object Net.WebClient).DownloadFile('https://github.com/eddiegroves/windows-dev-machine/archive/master.zip', "$((Get-Location).Path)\windows-dev-machine.zip")
-    # Unzip (should have `tar` via the Chef installer)
+    (New-Object Net.WebClient).DownloadFile('https://github.com/eddiegroves/windows-dev-machine/archive/master.zip',
+     "$((Get-Location).Path)\windows-dev-machine.zip")
     tar xf .\windows-dev-machine.zip
     cd .\windows-dev-machine-master
 
-3. Get ruby dependencies
+The above should create a temp working directory, download the repository (fresh 
+machine won't have git yet) and unzip. Handily `tar` comes via the Chef installer. 
+
+### Get ruby dependencies
 
     bundle install
 
-4. Get cookbook dependencies
+### Get cookbook dependencies
 
     berks install --path ./cookbooks
 
-5. Run Chef
+### Run Chef
 
     chef-solo -c ./solo.rb -j ./node.json
 
