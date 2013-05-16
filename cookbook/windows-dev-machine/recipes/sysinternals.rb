@@ -1,14 +1,15 @@
 # Sysinternals
-url = 'http://download.sysinternals.com/files/SysinternalsSuite.zip'
-dir = 'c:/home/sysinternals'
+url = node['sysinternals']['path']
+path = node['sysinternals']['path']
+check_file = "PsExec.exe"
 
-windows_zipfile dir do
+windows_zipfile path do
   source url
   action :unzip
-  not_if {::File.exists?("#{dir}/PsExec.exe")}
+  not_if {::File.exists?("#{path}/#{check_file}")}
 end
 
-windows_path dir do
+windows_path path do
     action :add
 end
 
