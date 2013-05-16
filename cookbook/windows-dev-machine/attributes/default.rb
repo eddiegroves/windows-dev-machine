@@ -1,4 +1,4 @@
-default['home'] = 'c:/home'
+default['home'] = File.join(ENV['SYSTEMDRIVE'], 'home')
 default['bin'] = File.join(default['home'], 'bin')
 
 def in_home(path)
