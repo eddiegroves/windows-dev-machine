@@ -28,6 +28,15 @@ My personal windows development machine setup that uses Chef with my win-dev coo
 
     chef-solo -c ./solo.rb -j ./node.json
 
+## Tips
+
+**Generate a file checksum with Powershell Community Extensions**
+
+By providing a checksum for remote files, Chef can skip downloading the file if
+it already exists in cache.
+
+    (Get-Hash -Algorithm SHA256 <file path>).HashString.ToLower()
+
 ## Uses
 
 * Chef
