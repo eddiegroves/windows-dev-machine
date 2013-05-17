@@ -1,6 +1,8 @@
 {
     "run_list": [
         "recipe[windows-dev-machine::sysinternals]",
-        "recipe[windows-dev-machine::7zip]"
+        "recipe[windows-dev-machine::7zip]",
+        "recipe[windows-dev-machine::git]",
+        "recipe[windows-dev-machine::beyondcompare]"
     ]
 }
