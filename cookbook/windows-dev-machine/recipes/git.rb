@@ -9,8 +9,14 @@ windows_package package do
     checksum cksum
 end
 
-windows_path path do
-    action :add
-    only_if { ::File.directory?(path) }
+windows_path(path) { action :add }
+
+# platform specific git config
+# .exe needed for running a command on windows
+execute 'explicitly set autocrlf behaviour' do
+    cwd path
+    command "git.exe config --global core.autocrlf true"
+    only_if { platform?('windows') }
 end
 
+# TODO Merge tool
