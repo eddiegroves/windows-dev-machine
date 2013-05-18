@@ -1,4 +1,4 @@
-default['rubyinstaller']['package'] = 'Ruby 1.9.3-p392'
-default['rubyinstaller']['url'] = 'http://rubyforge.org/frs/download.php/76952/rubyinstaller-1.9.3-p392.exe'
-default['rubyinstaller']['checksum'] = '7caa832b52873aaec3bc8da465e19196514149a7e3839a7882003fe80224e90d'
+default['rubyinstaller']['package'] = 'Ruby 1.9.3-p429'
+default['rubyinstaller']['url'] = 'http://rubyforge.org/frs/download.php/76952/rubyinstaller-1.9.3-p429.exe'
+default['rubyinstaller']['checksum'] = '96537a2d45189cc3bbdd850227443630ebaefa75ca9fdd0829953affa4d9fa8c'
 
