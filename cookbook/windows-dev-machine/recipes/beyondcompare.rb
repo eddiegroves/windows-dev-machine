@@ -1,5 +1,5 @@
 package = node['bcompare']['package']
-path = node['bcompare']['path']
+install_path = node['bcompare']['path']
 url = node['bcompare']['url']
 cksum = node['bcompare']['checksum']
 
@@ -10,8 +10,8 @@ windows_package package do
     installer_type :inno
 end
 
-windows_path path do
+windows_path install_path do
     action :add
-    only_if { ::File.directory?(path) }
+    only_if { ::File.directory?(install_path) }
 end
 

@@ -1,21 +1,21 @@
 url = node['putty']['url']
-path = node['putty']['path']
+install_path = node['putty']['path']
 cksum = node['putty']['checksum']
 check_file = "putty.exe"
 
-windows_zipfile path do
+windows_zipfile install_path do
   action :unzip
-  not_if {::File.exists?("#{path}/#{check_file}")}
+  not_if {::File.exists?("#{install_path}/#{check_file}")}
   source url
   checksum cksum
 end
 
-windows_path(path) { action :add }
+windows_path(install_path) { action :add }
 
 # Setting git to use putty for ssh
 powershell "setting GIT_SSH env var" do
     code <<-EOH
-    [Environment]::SetEnvironmentVariable('GIT_SSH', '#{path}/plink.exe', 'User')
+    [Environment]::SetEnvironmentVariable('GIT_SSH', '#{install_path}/plink.exe', 'User')
     EOH
     only_if {ENV['GIT_SSH'] == nil}
 end
