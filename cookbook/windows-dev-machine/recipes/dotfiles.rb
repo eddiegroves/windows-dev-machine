@@ -15,3 +15,10 @@ execute 'download dotfiles' do
     not_if { File.directory?(install_path) }
 end
 
+windows_batch 'symlinks' do
+    cwd ENV['home']
+    code <<-EOH
+    dotfiles\\symlinks.bat
+    EOH
+end
+
