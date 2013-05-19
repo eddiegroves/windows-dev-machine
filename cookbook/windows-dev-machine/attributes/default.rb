@@ -14,3 +14,7 @@ def in_program_files(path, x86 = false)
   File.join(ENV['SYSTEMDRIVE'], program_files, path)
 end
 
+def in_home(path)
+  File.join(ENV['HOME'], path)
+end
+

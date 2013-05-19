@@ -7,4 +7,3 @@ default['rubydevkit']['path'] = File.join(ENV['SYSTEMDRIVE'], 'Ruby193', 'devkit
 default['rubydevkit']['url'] = 'https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe'
 default['rubydevkit']['checksum'] = '6c3af5487dafda56808baf76edd262b2020b1b25ab86aabf972629f4a6a54491'
 
-
