@@ -11,3 +11,8 @@ end
 
 windows_path(install_path) { action :add }
 
+execute 'register vim type library' do
+    cwd install_path
+    command 'gvim.exe -silent -register'
+end
+
