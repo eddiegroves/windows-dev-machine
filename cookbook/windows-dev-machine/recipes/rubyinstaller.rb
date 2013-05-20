@@ -32,6 +32,7 @@ windows_batch 'run devkit init' do
     ruby dk.rb init
     EOH
     cwd devkit_path
+    not_if { File.exists?("#{devkit_path}/config.yml") }
 end
 
 windows_batch 'run devkit install' do
@@ -39,5 +40,6 @@ windows_batch 'run devkit install' do
     ruby dk.rb install
     EOH
     cwd devkit_path
+    not_if { File.exists?("#{install_path}/../lib/ruby/site_ruby/devkit.rb") }
 end
 
