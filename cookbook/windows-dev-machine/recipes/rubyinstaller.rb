@@ -18,13 +18,12 @@ remote_file "#{Chef::Config[:file_cache_path]}/devkit.exe" do
     not_if { File.directory?(devkit_path) }
 end
 
-zip_dir = node['7zip']['bin_dir']
 windows_batch 'unzip self extracting archive' do
     code <<-EOH
     7z.exe x #{Chef::Config[:file_cache_path]}/devkit.exe -o#{devkit_path}
     EOH
     not_if { File.directory?(devkit_path) }
-    cwd zip_dir
+    cwd Path.program_files('7-Zip')
 end
 
 windows_batch 'run devkit init' do

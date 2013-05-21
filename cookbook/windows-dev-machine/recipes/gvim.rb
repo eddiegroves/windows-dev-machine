@@ -18,7 +18,7 @@ end
 execute 'download vundle' do
     command "git.exe clone https://github.com/gmarik/vundle.git #{vundle}"
     not_if { File.directory?(vundle) }
-    cwd 'C:/Program Files (x86)/Git/bin'
+    cwd Path.program_files('Git/bin', x86 = true)
 end
 
 windows_path(install_path) { action :add }
