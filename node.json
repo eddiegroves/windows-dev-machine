@@ -10,6 +10,7 @@
         "recipe[windows-dev-machine::rubyinstaller]",
         "recipe[windows-dev-machine::dotfiles]",
         "recipe[windows-dev-machine::conemu]",
-        "recipe[windows-dev-machine::google-chrome]"
+        "recipe[windows-dev-machine::google-chrome]",
+        "recipe[windows-dev-machine::vlc]"
     ]
 }
