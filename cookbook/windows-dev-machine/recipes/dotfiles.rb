@@ -7,6 +7,7 @@ windows_batch 'trust github' do
     exit /b 0
     EOH
     not_if { File.exists?(File.join(ENV['HOME'], '.ssh/known_hosts')) }
+    cwd node['putty']['path']
 end
 
 execute 'download dotfiles' do

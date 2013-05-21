@@ -20,3 +20,7 @@ powershell "setting GIT_SSH env var" do
     only_if {ENV['GIT_SSH'] == nil}
 end
 
+if ENV['GIT_SSH'] == nil
+    ENV['GIT_SSH'] = "#{install_path}/plink.exe"
+end
+

@@ -25,6 +25,7 @@ windows_batch 'unzip self extracting archive' do
     7z.exe x #{Chef::Config[:file_cache_path]}/devkit.exe -o#{devkit_path}
     EOH
     not_if { File.directory?(devkit_path) }
+    cwd node['7zip']['path'] 
 end
 
 windows_batch 'run devkit init' do
