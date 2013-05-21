@@ -29,6 +29,10 @@ machine won't have git yet) and unzip. Handily `tar` comes via the Chef installe
 
     chef-solo -c ./solo.rb -j ./node.json
 
+## Requirements
+
+Dotfiles requires a valid SSH key configured with Github.
+
 ## Tips
 
 **Generate a file checksum with Powershell Community Extensions**
