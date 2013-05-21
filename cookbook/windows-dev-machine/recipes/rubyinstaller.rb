@@ -12,8 +12,6 @@ windows_package package do
     checksum cksum
 end 
 
-windows_path(install_path) { action :add }
-
 remote_file "#{Chef::Config[:file_cache_path]}/devkit.exe" do
     source devkit_url
     checksum devkit_cksum
@@ -43,4 +41,6 @@ windows_batch 'run devkit install' do
     cwd devkit_path
     not_if { File.exists?("#{install_path}/../lib/ruby/site_ruby/devkit.rb") }
 end
+
+windows_path(install_path) { action :add }
 

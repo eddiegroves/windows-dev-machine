@@ -5,9 +5,9 @@
         "recipe[windows-dev-machine::git]",
         "recipe[windows-dev-machine::beyondcompare]",
         "recipe[windows-dev-machine::putty]",
+        "recipe[windows-dev-machine::gvim]",
         "recipe[windows-dev-machine::dotnetframework]",
         "recipe[windows-dev-machine::rubyinstaller]",
-        "recipe[windows-dev-machine::gvim]",
         "recipe[windows-dev-machine::dotfiles]"
     ]
 }

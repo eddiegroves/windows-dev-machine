@@ -10,8 +10,6 @@ windows_zipfile install_path do
   checksum cksum
 end
 
-windows_path(install_path) { action :add }
-
 # Setting git to use putty for ssh
 powershell "setting GIT_SSH env var" do
     code <<-EOH
@@ -23,4 +21,6 @@ end
 if ENV['GIT_SSH'] == nil
     ENV['GIT_SSH'] = "#{install_path}/plink.exe"
 end
+
+windows_path(install_path) { action :add }
 

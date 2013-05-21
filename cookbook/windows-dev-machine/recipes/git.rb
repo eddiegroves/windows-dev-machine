@@ -10,8 +10,6 @@ windows_package package do
     checksum cksum
 end
 
-windows_path(install_path) { action :add }
-
 # platform specific git config
 # .exe needed for running a command on windows
 execute 'explicitly set autocrlf behaviour' do
@@ -41,4 +39,6 @@ execute 'set beyond compare mergetool path' do
     command "git.exe config --global mergetool.bc3.path \"#{bcomp_path}/bcomp.exe\""
     only_if { platform?('windows') }
 end
+
+windows_path(install_path) { action :add }
 
