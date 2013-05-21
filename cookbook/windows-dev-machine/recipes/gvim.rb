@@ -15,10 +15,11 @@ execute 'register vim type library' do
     command 'gvim.exe -silent -register'
 end
 
+git_dir = node['git']['bin_dir']
 execute 'download vundle' do
-    cwd node['git']['bin_dir']
     command "git.exe clone https://github.com/gmarik/vundle.git #{vundle}"
     not_if { File.directory?(vundle) }
+    cwd git_dir
 end
 
 windows_path(install_path) { action :add }
