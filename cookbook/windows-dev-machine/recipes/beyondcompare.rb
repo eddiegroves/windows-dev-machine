@@ -1,5 +1,5 @@
 package = node['bcompare']['package']
-install_path = node['bcompare']['path']
+install_path = node['bcompare']['bin_dir']
 url = node['bcompare']['url']
 cksum = node['bcompare']['checksum']
 

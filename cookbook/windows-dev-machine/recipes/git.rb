@@ -1,8 +1,8 @@
 package = node['git']['package']
-install_path = node['git']['path']
+install_path = node['git']['bin_dir']
 url = node['git']['url']
 cksum = node['git']['checksum']
-bcomp_path = node['bcompare']['path']
+bcomp_path = node['bcompare']['bin_dir']
 
 windows_package package do
     action :install

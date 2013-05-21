@@ -1,5 +1,5 @@
 url = node['putty']['url']
-install_path = node['putty']['path']
+install_path = node['putty']['bin_dir']
 cksum = node['putty']['checksum']
 check_file = "putty.exe"
 

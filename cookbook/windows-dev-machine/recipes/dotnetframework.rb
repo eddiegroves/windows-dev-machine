@@ -1,6 +1,6 @@
 package = node['dotnetframework']['package']
 url = node['dotnetframework']['url']
-install_path = node['dotnetframework']['path']
+install_path = node['dotnetframework']['bin_dir']
 cksum = node['dotnetframework']['checksum']
 
 windows_package package do

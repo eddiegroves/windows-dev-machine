@@ -1,8 +1,8 @@
 package = node['rubyinstaller']['package']
-install_path = node['rubyinstaller']['path']
+install_path = node['rubyinstaller']['bin_dir']
 url = node['rubyinstaller']['url']
 cksum = node['rubyinstaller']['checksum']
-devkit_path = node['rubydevkit']['path'] 
+devkit_path = node['rubydevkit']['bin_dir'] 
 devkit_url = node['rubydevkit']['url'] 
 devkit_cksum = node['rubydevkit']['checksum'] 
 
@@ -23,7 +23,7 @@ windows_batch 'unzip self extracting archive' do
     7z.exe x #{Chef::Config[:file_cache_path]}/devkit.exe -o#{devkit_path}
     EOH
     not_if { File.directory?(devkit_path) }
-    cwd node['7zip']['path'] 
+    cwd node['7zip']['bin_dir']
 end
 
 windows_batch 'run devkit init' do

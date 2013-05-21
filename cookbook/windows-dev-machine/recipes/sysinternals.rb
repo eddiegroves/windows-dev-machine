@@ -1,6 +1,6 @@
 # Sysinternals
 url = node['sysinternals']['url']
-install_path = node['sysinternals']['path']
+install_path = node['sysinternals']['bin_dir']
 cksum = node['sysinternals']['checksum']
 check_file = "PsExec.exe"
 

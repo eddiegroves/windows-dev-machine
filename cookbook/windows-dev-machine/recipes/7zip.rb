@@ -1,5 +1,5 @@
 package = node['7zip']['package']
-install_path = node['7zip']['path']
+install_path = node['7zip']['bin_dir']
 url = node['7zip']['url']
 cksum = node['7zip']['checksum']
 

@@ -1,5 +1,5 @@
 package = node['gvim']['package']
-install_path = node['gvim']['path']
+install_path = node['gvim']['bin_dir']
 url = node['gvim']['url']
 cksum = node['gvim']['checksum']
 vundle = File.join(ENV['HOME'], '.vim/bundle/vundle')
@@ -16,7 +16,7 @@ execute 'register vim type library' do
 end
 
 execute 'download vundle' do
-    cwd node['git']['path']
+    cwd node['git']['bin_dir']
     command "git.exe clone https://github.com/gmarik/vundle.git #{vundle}"
     not_if { File.directory?(vundle) }
 end
