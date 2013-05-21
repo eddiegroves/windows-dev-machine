@@ -8,6 +8,7 @@
         "recipe[windows-dev-machine::gvim]",
         "recipe[windows-dev-machine::dotnetframework]",
         "recipe[windows-dev-machine::rubyinstaller]",
-        "recipe[windows-dev-machine::dotfiles]"
+        "recipe[windows-dev-machine::dotfiles]",
+        "recipe[windows-dev-machine::conemu]"
     ]
 }
