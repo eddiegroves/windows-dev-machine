@@ -32,6 +32,13 @@ machine won't have git yet) and unzip. Handily `tar` comes via the Chef installe
 ## Requirements
 
 Dotfiles requires a valid SSH key configured with Github.
+Using putty tools for example:
+
+    http://the.earth.li/~sgtatham/putty/latest/x86/pageant.exe
+    (New-Object Net.WebClient).DownloadFile('http://the.earth.li/~sgtatham/putty/latest/x86/pageant.exe',
+     "$((Get-Location).Path)\pageant.exe")
+    (New-Object Net.WebClient).DownloadFile('http://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe', 
+     "$((Get-Location).Path)\pageant.exe")
 
 ## Tips
 
