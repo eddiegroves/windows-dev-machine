@@ -37,7 +37,7 @@ Using putty tools for example:
     (New-Object Net.WebClient).DownloadFile('http://the.earth.li/~sgtatham/putty/latest/x86/pageant.exe',
      "$((Get-Location).Path)\pageant.exe")
     (New-Object Net.WebClient).DownloadFile('http://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe', 
-     "$((Get-Location).Path)\pageant.exe")
+     "$((Get-Location).Path)\puttygen.exe")
 
 ## Tips
 
