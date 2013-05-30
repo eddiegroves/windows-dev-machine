@@ -12,6 +12,9 @@
         "recipe[windows-dev-machine::conemu]",
         "recipe[windows-dev-machine::google-chrome]",
         "recipe[windows-dev-machine::vlc]",
-        "recipe[windows-dev-machine::chocolatey]"
+        "recipe[windows-dev-machine::chocolatey]",
+        "recipe[windows-dev-machine::fiddler]",
+        "recipe[windows-dev-machine::xunit]",
+        "recipe[windows-dev-machine::nodejs]"
     ]
 }
