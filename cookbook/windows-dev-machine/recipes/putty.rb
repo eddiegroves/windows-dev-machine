@@ -15,7 +15,6 @@ powershell "setting GIT_SSH env var" do
     code <<-EOH
     [Environment]::SetEnvironmentVariable('GIT_SSH', '#{install_path}/plink.exe', 'User')
     EOH
-    only_if {ENV['GIT_SSH'] == nil}
 end
 
 if ENV['GIT_SSH'] == nil
