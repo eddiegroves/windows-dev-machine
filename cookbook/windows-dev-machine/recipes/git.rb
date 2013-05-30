@@ -10,6 +10,12 @@ windows_package package do
     checksum cksum
 end
 
+# Get gitconfig template
+remote_file Path.home('.gitconfig') do
+    source 'https://raw.github.com/eddiegroves/dotfiles/master/gitconfig' 
+    not_if { File.exists?(Path.home('.gitconfig')) }
+end
+
 # platform specific git config
 # .exe needed for running a command on windows
 execute 'explicitly set autocrlf behaviour' do
