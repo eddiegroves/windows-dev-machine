@@ -16,6 +16,7 @@
         "recipe[windows-dev-machine::fiddler]",
         "recipe[windows-dev-machine::xunit]",
         "recipe[windows-dev-machine::nodejs]",
-        "recipe[windows-dev-machine::powershell]"
+        "recipe[windows-dev-machine::powershell]",
+        "recipe[windows-dev-machine::pscx]"
     ]
 }
