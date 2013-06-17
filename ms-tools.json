@@ -1,5 +1,6 @@
 {
     "run_list": [
-        "recipe[windows-dev-machine::sqlserver-localdb]"
+        "recipe[windows-dev-machine::sqlserver-localdb]",
+        "recipe[windows-dev-machine::visual-studio]"
     ]
 }
