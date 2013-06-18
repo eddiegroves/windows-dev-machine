@@ -28,7 +28,7 @@ windows_batch 'unzip update iso' do
 end
 
 windows_package 'Microsoft Visual Studio Ultimate 2012 Update 2' do
-    source "#{Chef::Config[:file_cache_path]}/visual-studio-update/VS2012.3.exe"
+    source "#{Chef::Config[:file_cache_path]}/visual-studio-update/VS2012.2.exe"
     options '/quiet /norestart'
     installer_type :custom
     action :install
