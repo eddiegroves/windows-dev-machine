@@ -6,3 +6,5 @@ cookbook_path [
 ]
 
 log_level :fatal
+# Send traffic through Fiddler 
+# http_proxy 'http://localhost:8888'
