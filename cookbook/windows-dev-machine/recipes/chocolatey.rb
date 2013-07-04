@@ -13,7 +13,7 @@ windows_batch "install scriptcs" do
     code <<-EOH
     cinst scriptcs
     EOH
+    cwd "#{ENV['systemdrive']}/chocolatey/bin"
     not_if { File.directory?("#{ENV['APPDATA']}/scriptcs") }
 end
-
 
